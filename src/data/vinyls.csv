@@ -1,110 +1,110 @@
-﻿ID,Artist,Album,Genre,Barcode,Year,Notes
-1,A Perfect Circle ,Thirteenth Step,,,,
-2,AFI,All Hallows EP,,,,
-3,AFI,Black Sails In the Sunset,,,,25th anniversary edition - neon orange
-4,AFI,Sing the Sorrow,,,,45 rpm
-5,AFI,Silver Bleeds the Black Sun,,,,
-6,AFI,DecemberUnderground,,,,
-7,AFI,Burials,,,,
-8,Against Me,Reinventing Axl Rose,,,,
-9,Alice in Chains,Jar of Flies,,,,
-10,Alkaline Trio,Damnesia,,,,
-11,Arctic Monkeys,Favorite Worst Nightmare,,,,
-12,Arctic Monkeys ,AM,,,,
-13,Bad Religion ,The Dissent of Man,,,2010,Special Edition Orange
-14,Band of Horses ,Cease To Begin,,,,
-15,Band of Horses ,Everything All the Time,,,,
-16,Blink-182,California,,,,
-17,Blink-182,Blink-182,,,,
-18,Blink-182,California,,,,
-19,Blink-182,One MoreTime,,,,
-20,Bob Dylan ,Blonde on Blonde,,,,
-21,Bob Dylan ,Blood on the Tracks,,,,
-22,Brand New,Deja Entendu,,,,
-23,Brian Fallon,Painkillers,,,,
-24,Brian Fallon,Not Bad For New Jersey,,,,
-25,Bruce Springsteen,Born in the USA,,,,
-26,Bruce Springsteen ,Born to Run,,,,
-27,Bruce Springsteen ,The River,,,,
-28,Bruce Springsteen ,Darkness as the Edge of Town,,,,
-29,Danny Elfman,The Nightmare Before Christmas,,,,
-30,Dave Hause,Drive it like it's stolen ,,,,play at 45rpm
-31,Dave Hause,Kick,,,,Clear Red Black Splatter
-32,Dave Matthews Band,Before These Crowded Streets ,,,,
-33,Eddie Vedder,Earthling,,,,
-34,Eddie Vedder,Ukelele Songs,,,,
-35,Foo Fighters ,The Colour and the Shape,,,,
-36,Frank Turner,Be More Kind,,,,
-37,Frank Turner ,England Keep my Bones,,,,
-38,Frank Turner ,No Man's Land,,,,
-39,Frank Turner ,Poetry of the Deed,,,,
-40,Frank Turner ,Undefeated,,,,Special Edition Purple
-41,Gorrilaz ,Demon Days,,,,
-42,Gorrilaz ,Gorrilaz,,,,
-43,Green Day,Dookie,,,,
-44,Interpol,Turn on the Bright Lights,,,,
-45,Jimi Hendrix Experience ,Are You Experienced?,,,,
-46,Jimmy Eat World,Chase This Light,,,,
-47,Jimmy Eat World,Bleed American,,,,
-48,Jimmy Eat World,Futures,,,,
-49,Jimmy Eat World,Clarity,,,,
-50,John Mellencamp ,Scarecrow,,,,
-51,Joy Division ,Unknown Pleasures ,,,,
-52,Less than Jake,B is for B-Sides,,,,
-53,Metric ,Fantasies,,,,
-54,Modest Mouse,Good News for People Who Love Bad News,,,,
-55,Muse,Absolution,,,,
-56,Neil Young,Barn,,,,
-57,Nirvana,In Utero 2013,,,,
-58,Nirvana ,Unplugged in NY,,,,
-59,Pearl Jam,10C 2014,,,,7in
-60,Pearl Jam,Backspacer,,,,
-61,Pearl Jam,Dark Matter,,,,10C special edition 
-62,Pearl Jam,Gigaton,,,,
-63,Pearl Jam,Ten Remastered,,,,
-64,Pearl Jam,Yield,,,,
-65,Pearl Jam,Binaural,,,,
-66,Pearl Jam,Lightning Bolt,,,,
-67,Pearl Jam,No Code,,,,
-68,Pearl Jam ,10C 2015,,,,7in
-69,Pearl Jam ,Vs.,,,,
-70,Pearl Jam ,Riot Act,,,,
-71,Pearl Jam ,No Code,,,,
-72,Pink Floyd,Dark Side of the Moon,,,,
-73,Pink Floyd,The Wall,,,,
-74,Radiohead,Amnesiac,,,,
-75,Radiohead,Kid A,,,,
-76,Radiohead,OK Computer,,,,
-77,Radiohead,The Bends,,,,
-78,Radiohead ,In Rainbows,,,,
-79,Red Hot Chili Peppers,By the Way,,,,
-80,Red Hot Chili Peppers,Californication,,,,
-81,Spanish Love Songs,Brave Faces Etc,,,,
-82,Stone Temple Pilots,Purple,,,,
-83,Streetlight Manifesto,Everything goes Numb,,,,
-84,Sum 41,All the Good Shit,,,,
-85,The Beatles,Abbey Road,,,,
-86,The Beatles,Let It Be,,,,
-87,The Beatles,Sgt Peppers Lonely Hearts Club Band,,,,
-88,The Cure,Disintegration,,,,
-89,The Cure,Pornography,,,,
-90,The Gaslight Anthem,Get Hurt,,,2013,
-91,The Gaslight Anthem,History Books,,,2023,
-92,The Gaslight Anthem,The 59 Sound,,,2008,
-93,The Gaslight Anthem,The 59 Sound Sessions,,,,
-94,The Gaslight Anthem,Sink or Swim,,,,
-95,The Gaslight Anthem,American Slang,,,,
-96,The Gaslight Anthem ,Handwritten ,,,,
-97,The Horrible Crowes,Elsie,,,,10th Anniversary Silver Vinyl
-98,The Menzingers,After the Party,,,,
-99,The Menzingers,On the Impossible Past,,,,UO Special Edition
-100,The Postal Service ,Give Up,,,,
-101,The Smashing Pumpkins,Melon Collie and the Infinite Sadness,,,,
-102,The Smashing Pumpkins,Siamese Dream,,,,
-103,The Strokes ,Is This It,,,,
-104,The Who,Who's Next?,,,,
-105,The Wonder Years,Suburbia I've Given You All and Now I'm Nothing,,,,
-106,Third Eye Blind,A Collection,,,,
-107,Third Eye Blind,Third Eye Blind,,,,
-108,Weezer,The Blue Album,,,,
-109,Incubus,Morning View,,,,
+id,artist,album,genre,barcode,year,notes,cover
+1,A Perfect Circle,Thirteenth Step,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/36/46/fb/3646fbc9-ab6c-db5d-e18e-941ea3eb1e1f/APC_13th_TC_1600x1600_1.png/600x600bb.jpg
+2,AFI,All Hallows EP,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/10/e1/e2/10e1e2c2-c32f-6577-6d6b-d6d7166af0ee/00888072354166.rgb.jpg/600x600bb.jpg
+3,AFI,Black Sails In the Sunset,,,,25th anniversary edition - neon orange,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a7/fc/1e/a7fc1eff-6a9e-0ffe-cf08-26c27ad62d18/00888072354159.rgb.jpg/600x600bb.jpg
+4,AFI,Sing the Sorrow,,,,45 rpm,
+5,AFI,Silver Bleeds the Black Sun,,,,,
+6,AFI,DecemberUnderground,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ba/3c/e1/ba3ce1d8-c63a-8d42-e3cc-85532f4a7785/06UMGIM22260.rgb.jpg/600x600bb.jpg
+7,AFI,Burials,,,,,
+8,Against Me,Reinventing Axl Rose,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b5/c0/ae/b5c0ae29-5b43-057b-5131-9c347f71ed4c/Reinventing_RGB_3000.jpg/600x600bb.jpg
+9,Alice in Chains,Jar of Flies,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/bd/d6/37/bdd6373e-dc26-e86e-1d31-9bb1f7656968/5099747485527.jpg/600x600bb.jpg
+10,Alkaline Trio,Damnesia,,,,,
+11,Arctic Monkeys,Favorite Worst Nightmare,,,,,
+12,Arctic Monkeys,AM,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/69/9c/b5/699cb5d6-115c-ff73-9d26-e57ea4350d72/887828031795.png/600x600bb.jpg
+13,Bad Religion,The Dissent of Man,,,2010,Special Edition Orange,
+14,Band of Horses,Cease To Begin,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/cb/3f/9e/cb3f9e63-248d-eaaf-5806-e951f692b0fa/098787074567.png/600x600bb.jpg
+15,Band of Horses,Everything All the Time,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f8/e0/db/f8e0db52-f6e5-5d85-6e0a-ae73e5caab11/mzi.qohxegpg.jpg/600x600bb.jpg
+16,Blink-182,California,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/85/29/01/852901eb-132d-a8f8-9f91-1d842bb253d0/4050538215700.jpg/600x600bb.jpg
+17,Blink-182,Blink-182,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/e3/9d/c5/e39dc58d-faa8-e707-8f94-42840aaa7a0c/16UMGIM35665.rgb.jpg/600x600bb.jpg
+18,Blink-182,California,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/85/29/01/852901eb-132d-a8f8-9f91-1d842bb253d0/4050538215700.jpg/600x600bb.jpg
+19,Blink-182,One MoreTime,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fc/54/22/fc542264-885c-7ebc-8ccc-914e14ee3a05/196871437561.jpg/600x600bb.jpg
+20,Bob Dylan,Blonde on Blonde,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/20/9d/bf/209dbf58-f698-7181-33de-0c29480beba0/074640084126.jpg/600x600bb.jpg
+21,Bob Dylan,Blood on the Tracks,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/34/6e/4d/346e4d1c-c9ef-cf7f-96d9-aad97286febb/074643323529.jpg/600x600bb.jpg
+22,Brand New,Deja Entendu,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/55/66/86/5566866b-0c84-3f85-136f-16d2f402f5be/16CRGIM00067.rgb.jpg/600x600bb.jpg
+23,Brian Fallon,Painkillers,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/44/02/24/44022461-6ffe-e899-e27c-85c878e2bab8/00602547729255.rgb.jpg/600x600bb.jpg
+24,Brian Fallon,Not Bad For New Jersey,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/27/19/8c/27198cf9-8a08-bebe-4c47-ae41ae531e16/820200993069.jpg/600x600bb.jpg
+25,Bruce Springsteen,Born in the USA,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/72/68/327268ba-b9dd-b322-2a16-bdd0212df48c/074643865326.jpg/600x600bb.jpg
+26,Bruce Springsteen,Born to Run,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0a/02/f7/0a02f7a1-ca2a-c0d7-7192-50314971721f/884977157031.jpg/600x600bb.jpg
+27,Bruce Springsteen,The River,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ac/29/8f/ac298fbd-fa23-e8de-09d7-dec9c977f912/074643685429.jpg/600x600bb.jpg
+28,Bruce Springsteen,Darkness as the Edge of Town,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b3/13/4e/b3134ed3-a05d-d3b2-8f96-8cddd067aa32/884977798753.jpg/600x600bb.jpg
+29,Danny Elfman,The Nightmare Before Christmas,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/26/5c/37/265c3733-e0a5-5758-6de0-f6a9f2a1ad6d/06PNDIM00838.rgb.jpg/600x600bb.jpg
+30,Dave Hause,Drive it like it's stolen,,,,play at 45rpm,
+31,Dave Hause,Kick,,,,Clear Red Black Splatter,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/40/fe/ac/40feace4-81ba-034f-9bc3-f48c675b8fb8/4050538484953.jpg/600x600bb.jpg
+32,Dave Matthews Band,Before These Crowded Streets,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a4/1f/a2/a41fa20a-84db-0012-87ca-37071fb24354/228.jpg/600x600bb.jpg
+33,Eddie Vedder,Earthling,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9b/2f/fb/9b2ffb26-9649-c3ba-ec99-502179ee391c/21UM1IM55929.rgb.jpg/600x600bb.jpg
+34,Eddie Vedder,Ukelele Songs,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/32/4c/20/324c209c-7a08-4538-244d-9def5c45045d/00602527725741.rgb.jpg/600x600bb.jpg
+35,Foo Fighters,The Colour and the Shape,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3e/68/64/3e686418-eb76-c367-464d-f6d2ce3c6765/828765549622.jpg/600x600bb.jpg
+36,Frank Turner,Be More Kind,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/eb/f6/ac/ebf6ac35-5b0f-5ac6-6b26-f965d7d2b6d3/00602567381532.rgb.jpg/600x600bb.jpg
+37,Frank Turner,England Keep my Bones,,,,,
+38,Frank Turner,No Man's Land,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/57/35/f9/5735f9cb-9d76-2116-bb5a-4b887ccd6989/19UMGIM54886.rgb.jpg/600x600bb.jpg
+39,Frank Turner,Poetry of the Deed,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/78/4c/e6/784ce6a9-88fd-f6ff-7723-c2feb3e84030/5056032324596.jpg/600x600bb.jpg
+40,Frank Turner,Undefeated,,,,Special Edition Purple,
+41,Gorrilaz,Demon Days,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1c/0f/81/1c0f818a-e458-dd84-6f1b-ccbdf5fe14d6/825646291045.jpg/600x600bb.jpg
+42,Gorrilaz,Gorrilaz,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/56/df/33/56df332a-da4a-d565-f40e-960905ee1a2b/075679878892.jpg/600x600bb.jpg
+43,Green Day,Dookie,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/28/ed/a1/28eda132-ebb4-9d9c-676b-04d237e3a1a9/238719.jpg/600x600bb.jpg
+44,Interpol,Turn on the Bright Lights,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/be/ef/aa/beefaad1-64ba-1288-d2ce-95a5964a020b/744861054566.png/600x600bb.jpg
+45,Jimi Hendrix Experience,Are You Experienced?,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/00/67/45/006745f5-95d5-5a06-35ed-d515e9cfd7d8/dj.tbwlxwoh.jpg/600x600bb.jpg
+46,Jimmy Eat World,Chase This Light,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/51/18/c6511830-4f7f-5d71-8fba-3ede2ca872e3/19UMGIM76696.rgb.jpg/600x600bb.jpg
+47,Jimmy Eat World,Bleed American,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/8c/28/1b/8c281bbb-daad-c473-6adb-1b4ca33a5a44/00602577027420.rgb.jpg/600x600bb.jpg
+48,Jimmy Eat World,Futures,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/82/69/99/82699977-1c7a-362a-c244-ff708e21640e/21UMGIM68217.rgb.jpg/600x600bb.jpg
+49,Jimmy Eat World,Clarity,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/28/99/c2/2899c223-1f88-7a86-9edb-40cdd0396a3d/00094639816750.rgb.jpg/600x600bb.jpg
+50,John Mellencamp,Scarecrow,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/94/d3/82/94d382aa-0d54-e3d8-354f-a68ba6b15891/22UMGIM86774.rgb.jpg/600x600bb.jpg
+51,Joy Division,Unknown Pleasures,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/13/90/c0/1390c072-4249-3739-7b3d-fd73ee4a5698/825646562831.jpg/600x600bb.jpg
+52,Less than Jake,B is for B-Sides,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/69/65/44/696544ac-b8c4-dfab-015c-cad373f20fe5/193436181631_01_img001.jpg/600x600bb.jpg
+53,Metric,Fantasies,,,,,
+54,Modest Mouse,Good News for People Who Love Bad News,,,,,
+55,Muse,Absolution,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4a/73/ab/4a73abdf-1d55-b3fe-484d-e023a507428e/5054197904233.jpg/600x600bb.jpg
+56,Neil Young,Barn,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/25/1b/9f/251b9f2b-2f3b-ef56-d0a6-ae8860d43f05/093624878414.jpg/600x600bb.jpg
+57,Nirvana,In Utero 2013,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e3/20/03/e32003a4-99bc-1c70-40ba-001882f35dba/00602537526840.rgb.jpg/600x600bb.jpg
+58,Nirvana,Unplugged in NY,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/46/24/33/462433f9-ee74-2d60-4538-859826a7bed7/00720642472729.rgb.jpg/600x600bb.jpg
+59,Pearl Jam,10C 2014,,,,7in,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c2/79/c4/c279c48b-2de1-0b5c-fc81-8fb3b5468ece/886448758860.jpg/600x600bb.jpg
+60,Pearl Jam,Backspacer,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8e/e3/6f/8ee36fd7-f9a9-7ede-e173-b1e001e5e5aa/00602527189802.rgb.jpg/600x600bb.jpg
+61,Pearl Jam,Dark Matter,,,,10C special edition,https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/49/d9/79/49d97919-6d10-e43e-8344-2b7c800e9918/24UMGIM11953.rgb.jpg/600x600bb.jpg
+62,Pearl Jam,Gigaton,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/5b/5d/c9/5b5dc90a-c847-8126-4060-6d2626d4fdae/20UMGIM03561.rgb.jpg/600x600bb.jpg
+63,Pearl Jam,Ten Remastered,,,,,
+64,Pearl Jam,Yield,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8e/e3/6f/8ee36fd7-f9a9-7ede-e173-b1e001e5e5aa/00602527189802.rgb.jpg/600x600bb.jpg
+65,Pearl Jam,Binaural,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d6/9a/98/d69a983f-e276-40c4-4ac3-ce8983cc19ce/884977849899.jpg/600x600bb.jpg
+66,Pearl Jam,Lightning Bolt,,,,,
+67,Pearl Jam,No Code,,,,,
+68,Pearl Jam,10C 2015,,,,7in,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/18/c8/d7/18c8d7bc-8491-09e6-df0d-6e0a83ead680/mzi.wsikzifg.jpg/600x600bb.jpg
+69,Pearl Jam,Vs.,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c2/79/c4/c279c48b-2de1-0b5c-fc81-8fb3b5468ece/886448758860.jpg/600x600bb.jpg
+70,Pearl Jam,Riot Act,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c2/79/c4/c279c48b-2de1-0b5c-fc81-8fb3b5468ece/886448758860.jpg/600x600bb.jpg
+71,Pearl Jam,No Code,,,,,
+72,Pink Floyd,Dark Side of the Moon,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/54/d0/62/54d06230-1196-0bd0-93b3-1bd3eef2b43d/cover_-.jpg/600x600bb.jpg
+73,Pink Floyd,The Wall,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3e/17/ec/3e17ec6d-f980-c64f-19e0-a6fd8bbf0c10/886445635850.jpg/600x600bb.jpg
+74,Radiohead,Amnesiac,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/43/d8/ec/43d8ec17-0e96-dba9-21d9-4cdf9d98f2bf/634904078362.png/600x600bb.jpg
+75,Radiohead,Kid A,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/bd/8e/13/bd8e1358-b367-a689-cb84-cebd0b067dc4/634904078263.png/600x600bb.jpg
+76,Radiohead,OK Computer,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/60/ba/0760ba0f-148c-b18f-d0ff-169ee96f3af5/634904078164.png/600x600bb.jpg
+77,Radiohead,The Bends,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1b/a9/5c/1ba95cac-b245-d386-63fb-6b857aa9dce8/634904078065.png/600x600bb.jpg
+78,Radiohead,In Rainbows,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/dd/50/c7/dd50c790-99ac-d3d0-5ab8-e3891fb8fd52/634904032463.png/600x600bb.jpg
+79,Red Hot Chili Peppers,By the Way,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ba/92/30/ba923057-ebc4-711e-33c9-5e3826907573/196292682946.jpg/600x600bb.jpg
+80,Red Hot Chili Peppers,Californication,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/94/d4/24/94d42473-eb0e-229b-dd84-900a1874a91d/093624931980.jpg/600x600bb.jpg
+81,Spanish Love Songs,Brave Faces Etc,,,,,
+82,Stone Temple Pilots,Purple,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/9c/c1/4d/9cc14ddd-fc63-58eb-d911-98de74825324/603497869275.jpg/600x600bb.jpg
+83,Streetlight Manifesto,Everything goes Numb,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b7/56/ab/b756aba4-c655-c72c-89cd-e64de1801a7d/859720904453_cover.jpg/600x600bb.jpg
+84,Sum 41,All the Good Shit,,,,,
+85,The Beatles,Abbey Road,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/48/53/43/485343e3-dd6a-0034-faec-f4b6403f8108/13UMGIM63890.rgb.jpg/600x600bb.jpg
+86,The Beatles,Let It Be,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5f/ff/9a/5fff9a6a-bb13-6507-5e68-2793ef798834/21UMGIM61121.rgb.jpg/600x600bb.jpg
+87,The Beatles,Sgt Peppers Lonely Hearts Club Band,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/85/d2/6485d219-91ac-5481-2668-7eab1320436d/21UMGIM57007.rgb.jpg/600x600bb.jpg
+88,The Cure,Disintegration,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music/93/3c/2c/mzi.ujtdsknz.jpg/600x600bb.jpg
+89,The Cure,Pornography,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/94/b1/e6/94b1e60c-def9-5e6a-7fc7-7a64aba53f7d/mzi.opremixd.jpg/600x600bb.jpg
+90,The Gaslight Anthem,Get Hurt,,,2013,,https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/4a/03/72/4a037254-b6ec-72c5-f2a9-20febf45aff8/00602537914814.rgb.jpg/600x600bb.jpg
+91,The Gaslight Anthem,History Books,,,2023,,https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4f/87/a2/4f87a2e8-024c-5ca0-a8b9-61b14b772eb6/197189236532.jpg/600x600bb.jpg
+92,The Gaslight Anthem,The 59 Sound,,,2008,,https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d5/c9/0c/d5c90cfe-24b5-1b20-711a-76e1d51ef19d/109678.jpg/600x600bb.jpg
+93,The Gaslight Anthem,The 59 Sound Sessions,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5d/bf/25/5dbf258f-faaf-7876-cea2-c7704d7956c6/109694.jpg/600x600bb.jpg
+94,The Gaslight Anthem,Sink or Swim,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/34/8d/27/348d27cd-443e-ef03-ce98-bcd14f84ecbd/888880559845.jpg/600x600bb.jpg
+95,The Gaslight Anthem,American Slang,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7e/9f/4f/7e9f4f79-325a-4949-fb64-8529ae0a27fa/109519.jpg/600x600bb.jpg
+96,The Gaslight Anthem,Handwritten,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ef/19/ce/ef19ce97-6d7b-ffdb-8edd-fd9ef795c17c/00602537111824.rgb.jpg/600x600bb.jpg
+97,The Horrible Crowes,Elsie,,,,10th Anniversary Silver Vinyl,https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/08/e7/27/08e727a0-dec6-cab5-e064-4ccb2914d834/109562.jpg/600x600bb.jpg
+98,The Menzingers,After the Party,,,,,
+99,The Menzingers,On the Impossible Past,,,,UO Special Edition,
+100,The Postal Service,Give Up,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e8/0d/c2/e80dc202-b4ec-b056-5dda-d51c16b89f17/098787104561.png/600x600bb.jpg
+101,The Smashing Pumpkins,Melon Collie and the Infinite Sadness,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/f9/c2/3f/f9c23ffb-d3b5-8b29-cf6d-8e85b1c3c4a3/5054316574576_cover.jpg/600x600bb.jpg
+102,The Smashing Pumpkins,Siamese Dream,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a9/6a/26/a96a262b-a0ec-16db-056f-11f47fd2e3a3/19UMGIM59908.rgb.jpg/600x600bb.jpg
+103,The Strokes,Is This It,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9c/ae/7a/9cae7a72-29ed-08aa-1b42-913776bbb6ec/886443855571.jpg/600x600bb.jpg
+104,The Who,Who's Next?,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4e/d5/19/4ed519ca-3f8b-65ee-eb21-89d5c6a0b44e/00602547140265.rgb.jpg/600x600bb.jpg
+105,The Wonder Years,Suburbia I've Given You All and Now I'm Nothing,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/41/52/bc/4152bcc3-eef4-39c9-8510-99391aa5aa69/362.jpg/600x600bb.jpg
+106,Third Eye Blind,A Collection,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/89/8f/21/898f2118-a3e1-2b4a-7481-d986d09ffc29/mzi.jbqxjhwg.jpg/600x600bb.jpg
+107,Third Eye Blind,Third Eye Blind,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/89/8f/21/898f2118-a3e1-2b4a-7481-d986d09ffc29/mzi.jbqxjhwg.jpg/600x600bb.jpg
+108,Weezer,The Blue Album,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/98/ef/02/98ef026e-7d73-f8ce-90d0-b41371ad20aa/16UMGIM52970.rgb.jpg/600x600bb.jpg
+109,Incubus,Morning View,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2c/95/ec/2c95ecf2-8303-50b6-2e19-ea6b28424af9/mzi.yficmzdc.jpg/600x600bb.jpg
