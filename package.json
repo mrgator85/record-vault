@@ -12,6 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.4.8"
+    "astro": "^7.4.8",
+    "csv-parse": "^7.0.3",
+    "csv-stringify": "^6.9.0"
   }
 }
