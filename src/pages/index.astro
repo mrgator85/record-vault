@@ -1,11 +1,249 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+import { parse } from 'csv-parse/sync';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Direct data fetch at build time (No API calls or hydration required)
+const csvPath = path.resolve('./src/data/collection.csv');
+let collection = [];
+
+if (fs.existsSync(csvPath)) {
+  const fileContent = fs.readFileSync(csvPath, 'utf-8');
+  collection = parse(fileContent, {
+    columns: true,
+    skip_empty_lines: true,
+    trim: true
+  }).map(record => {
+    const normalized = {};
+    for (const key of Object.keys(record)) {
+      normalized[key.toLowerCase()] = record[key];
+    }
+    return normalized;
+  });
+}
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinyl Collection Vault</title>
+  <style>
+    :root {
+      --bg: #121212;
+      --card-bg: #1e1e1e;
+      --text: #e0e0e0;
+      --accent: #ff5722;
+      --text-dim: #a0a0a0;
+      --border: #333333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+
+    @media (min-width: 600px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .stats {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background-color: var(--card-bg);
+      color: var(--text);
+      font-size: 1rem;
+      outline: none;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+    }
+
+    .cover-wrap {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: #2a2a2a;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cover-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .id-badge {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-mono: monospace;
+    }
+
+    .details {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      flex-grow: 1;
+    }
+
+    .album {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .artist {
+      color: var(--text-dim);
+      font-size: 0.875rem;
+    }
+
+    .meta {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 1rem;
+      color: var(--text-dim);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1><span>📻</span> Vinyl Vault</h1>
+      <p class="stats">{collection.length} Records Cataloged</p>
+    </div>
+  </header>
+
+  <section class="controls">
+    <input type="text" id="searchInput" placeholder="Search by artist, album, genre, or ID..." />
+  </section>
+
+  <main class="grid" id="recordGrid">
+    {collection.map((item) => (
+      <article class="card" data-search={`${item.id} ${item.artist} ${item.album} ${item.genre || ''}`.toLowerCase()}>
+        <div class="cover-wrap">
+          <span class="id-badge">#{item.id}</span>
+          {item.cover_url || item.cover ? (
+            <img src={item.cover_url || item.cover} alt={`${item.album} cover`} loading="lazy" />
+          ) : (
+            <span style="font-size: 2rem; opacity: 0.2;">🎵</span>
+          )}
+        </div>
+        <div class="details">
+          <div class="album">{item.album || 'Untitled Record'}</div>
+          <div class="artist">{item.artist || 'Unknown Artist'}</div>
+          <div class="meta">
+            <span>{item.genre || 'Vinyl'}</span>
+            <span>{item.year || ''}</span>
+          </div>
+        </div>
+      </article>
+    ))}
+  </main>
+
+  <!-- Zero-framework instant search filter -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+
+    searchInput?.addEventListener('input', (e) => {
+      const term = (e.target as HTMLInputElement).value.toLowerCase().trim();
+      
+      cards.forEach((card) => {
+        const searchData = card.getAttribute('data-search') || '';
+        if (searchData.includes(term)) {
+          (card as HTMLElement).style.display = 'flex';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
