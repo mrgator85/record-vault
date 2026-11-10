@@ -6,6 +6,7 @@
     "node": ">=22.23.4"
   },
   "scripts": {
+    "prebuild": "node scripts/update-ids.js",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
