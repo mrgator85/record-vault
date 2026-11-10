@@ -1,5 +1,5 @@
 ---
-// No server-side file reading needed anymore—the page fetches from the API!
+// Clean, API-driven single page application
 ---
 
 <!DOCTYPE html>
@@ -8,22 +8,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vinyl Collection Vault</title>
-  <style>
+  <style is:global>
     :root {
       --bg: #121212;
-      --card-bg: #1e1e1e;
-      --text: #e0e0e0;
+      --card-bg: #1c1c1e;
+      --card-border: #2c2c2e;
+      --img-bg: #2a2a2a;
+      --text-main: #ffffff;
+      --text-sub: #a1a1a6;
       --accent: #ff5722;
-      --text-dim: #a0a0a0;
-      --border: #333333;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg);
-      color: var(--text);
+      color: var(--text-main);
       padding: 2rem 1rem;
       max-width: 1200px;
       margin: 0 auto;
@@ -32,9 +37,9 @@
     header {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.5rem;
       margin-bottom: 2rem;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--card-border);
       padding-bottom: 1.5rem;
     }
 
@@ -46,69 +51,133 @@
       }
     }
 
-    h1 { font-size: 1.75rem; letter-spacing: -0.5px; display: flex; align-items: center; gap: 0.5rem; }
-    .stats { font-size: 0.9rem; color: var(--text-dim); }
-    .controls { display: flex; gap: 1rem; margin-bottom: 2rem; }
+    h1 {
+      font-size: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .stats {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+    }
+
+    .controls {
+      margin-bottom: 2rem;
+    }
 
     input[type="text"] {
       width: 100%;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      border: 1px solid var(--border);
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
       background-color: var(--card-bg);
-      color: var(--text);
+      color: var(--text-main);
       font-size: 1rem;
       outline: none;
     }
-    input[type="text"]:focus { border-color: var(--accent); }
 
+    input[type="text"]:focus {
+      border-color: var(--accent);
+    }
+
+    /* Flexible Grid Container matching your sketch */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 1.5rem;
     }
 
+    /* Outer Card Container */
     .card {
       background-color: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 12px;
       display: flex;
       flex-direction: column;
-      transition: transform 0.15s ease;
+      gap: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      min-width: 0;
+      overflow: hidden;
     }
-    .card:hover { transform: translateY(-2px); }
 
-    .cover-wrap {
+    /* Inset Art / Placeholder Container */
+    .art-wrap {
       width: 100%;
       aspect-ratio: 1 / 1;
-      background-color: #2a2a2a;
+      background-color: var(--img-bg);
+      border-radius: 10px;
+      overflow: hidden;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
-    .cover-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+    .art-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     .id-badge {
       position: absolute;
-      top: 0.5rem;
-      left: 0.5rem;
-      background: rgba(0, 0, 0, 0.75);
+      top: 8px;
+      left: 8px;
+      background: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(4px);
       color: var(--accent);
       font-weight: bold;
       font-size: 0.75rem;
-      padding: 0.2rem 0.5rem;
+      padding: 2px 6px;
       border-radius: 4px;
       font-family: monospace;
     }
 
-    .details { padding: 1rem; display: flex; flex-direction: column; gap: 0.25rem; flex-grow: 1; }
-    .album { font-weight: 600; font-size: 1rem; line-height: 1.3; }
-    .artist { color: var(--text-dim); font-size: 0.875rem; }
-    .meta { margin-top: auto; padding-top: 0.75rem; display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-dim); }
-    .loading { grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-dim); }
+    /* Bottom Text Section */
+    .meta-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0 4px 4px 4px;
+      min-width: 0;
+    }
+
+    .artist {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .title {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .extra-meta {
+      font-size: 0.75rem;
+      color: #666;
+      margin-top: 2px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .loading {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 1rem;
+      color: var(--text-sub);
+    }
   </style>
 </head>
 <body>
@@ -121,77 +190,77 @@
   </header>
 
   <section class="controls">
-    <input type="text" id="searchInput" placeholder="Search by artist, album, genre, or ID..." />
+    <input type="text" id="searchInput" placeholder="Search artist, title, genre, or ID..." />
   </section>
 
   <main class="grid" id="recordGrid">
-    <div class="loading">Fetching collection from API endpoint...</div>
+    <div class="loading">Loading collection...</div>
   </main>
 
   <script>
-    async function loadCollection() {
+    async function initCollection() {
       const grid = document.getElementById('recordGrid');
       const countEl = document.getElementById('recordCount');
-      const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+      const searchInput = document.getElementById('searchInput');
 
       try {
-        // Fetch live from your hardware API endpoint
-        const response = await fetch('./api/collection.json');
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        
-        const records = await response.json();
-        
+        const res = await fetch('./api/collection.json');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const records = await res.json();
+
         countEl.textContent = `${records.length} Records Cataloged`;
-        
-        if (records.length === 0) {
-          grid.innerHTML = '<div class="loading">No records found in collection.</div>';
+
+        if (!records || records.length === 0) {
+          grid.innerHTML = '<div class="loading">No records found.</div>';
           return;
         }
 
-        // Render cards
-        grid.innerHTML = records.map(item => `
-          <article class="card" data-search="${encodeURIComponent(`${item.id || ''} ${item.artist || ''} ${item.album || ''} ${item.genre || ''}`.toLowerCase())}">
-            <div class="cover-wrap">
-              <span class="id-badge">#${item.id || '?'}</span>
-              ${item.cover_url || item.cover ? `
-                <img src="${item.cover_url || item.cover}" alt="${item.album || 'Album'} cover" loading="lazy" />
-              ` : `
-                <span style="font-size: 2rem; opacity: 0.2;">🎵</span>
-              `}
-            </div>
-            <div class="details">
-              <div class="album">${item.album || 'Untitled Record'}</div>
-              <div class="artist">${item.artist || 'Unknown Artist'}</div>
-              <div class="meta">
-                <span>${item.genre || 'Vinyl'}</span>
-                <span>${item.year || ''}</span>
-              </div>
-            </div>
-          </article>
-        `).join('');
+        grid.innerHTML = records.map(item => {
+          const searchData = `${item.id || ''} ${item.artist || ''} ${item.album || ''} ${item.genre || ''}`.toLowerCase();
+          const coverUrl = item.cover || item.cover_url;
 
-        // Wire up live search filter
+          return `
+            <article class="card" data-search="${encodeURIComponent(searchData)}">
+              <div class="art-wrap">
+                <span class="id-badge">#${item.id || '?'}</span>
+                ${coverUrl ? `
+                  <img src="${coverUrl}" alt="${item.album || 'Album'} cover" loading="lazy" />
+                ` : `
+                  <span style="font-size: 2.5rem; opacity: 0.25;">🎵</span>
+                `}
+              </div>
+              <div class="meta-wrap">
+                <div class="artist">${item.artist || 'Unknown Artist'}</div>
+                <div class="title">${item.album || 'Untitled Record'}</div>
+                <div class="extra-meta">
+                  <span>${item.genre || 'Vinyl'}</span>
+                  <span>${item.year || ''}</span>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join('');
+
         const cards = document.querySelectorAll('.card');
         searchInput?.addEventListener('input', (e) => {
-          const term = (e.target as HTMLInputElement).value.toLowerCase().trim();
-          cards.forEach((card) => {
-            const searchData = decodeURIComponent(card.getAttribute('data-search') || '');
-            if (searchData.includes(term)) {
-              (card as HTMLElement).style.display = 'flex';
+          const term = (e.target.value || '').toLowerCase().trim();
+          cards.forEach(card => {
+            const data = decodeURIComponent(card.getAttribute('data-search') || '');
+            if (data.includes(term)) {
+              card.style.display = 'flex';
             } else {
-              (card as HTMLElement).style.display = 'none';
+              card.style.display = 'none';
             }
           });
         });
 
       } catch (err) {
-        console.error("Failed to load collection API:", err);
-        grid.innerHTML = `<div class="loading" style="color: #ff5722;">Error loading collection endpoint: ${err.message}</div>`;
+        grid.innerHTML = `<div class="loading" style="color: #ff5722;">Error loading API: ${err.message}</div>`;
         countEl.textContent = 'API Error';
       }
     }
 
-    loadCollection();
+    initCollection();
   </script>
 </body>
 </html>

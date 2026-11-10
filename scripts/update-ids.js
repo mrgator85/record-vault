@@ -8,7 +8,7 @@ const jsonOutputDir = path.resolve('./public/api');
 const jsonOutputPath = path.join(jsonOutputDir, 'collection.json');
 
 if (!fs.existsSync(csvPath)) {
-  console.error('❌ Error: collection.csv not found at src/data/collection.csv');
+  console.error('❌ Error: vinyls.csv not found at src/data/vinyls.csv');
   process.exit(1);
 }
 
@@ -24,60 +24,98 @@ const rawRecords = parse(fileContent, {
 const records = rawRecords.map(record => {
   const normalized = {};
   for (const key of Object.keys(record)) {
-    normalized[key.toLowerCase()] = record[key];
+    normalized[key.trim().toLowerCase()] = record[key];
   }
   return normalized;
 });
 
-const seenIds = new Set();
-let maxId = 0;
-let updated = false;
-
-// First pass: Validate existing IDs
-for (let record of records) {
-  if (record.id !== undefined && record.id !== null && record.id.toString().trim() !== '') {
-    const currentId = parseInt(record.id.toString().trim(), 10);
+// Helper function to fetch high-res album art from iTunes Search API
+async function fetchCoverArt(artist, album) {
+  try {
+    const query = encodeURIComponent(`${artist} ${album}`);
+    const res = await fetch(`https://itunes.apple.com/search?term=${query}&entity=album&limit=1`);
+    const data = await res.json();
     
-    if (isNaN(currentId)) {
-      console.error(`❌ Build Error: Non-numeric ID found -> "${record.id}" for album "${record.album}"`);
-      process.exit(1);
+    if (data.results && data.results.length > 0) {
+      const artworkUrl = data.results[0].artworkUrl100;
+      // Upscale thumbnail from 100x100 to 600x600 for sharp rendering
+      return artworkUrl ? artworkUrl.replace('100x100bb', '600x600bb') : null;
     }
-    
-    if (seenIds.has(currentId)) {
-      console.error(`❌ Build Error: Duplicate ID found -> ${currentId}`);
-      process.exit(1);
+  } catch (err) {
+    console.warn(`⚠️ Could not fetch art for "${album}" by "${artist}": ${err.message}`);
+  }
+  return null;
+}
+
+async function run() {
+  const seenIds = new Set();
+  let maxId = 0;
+  let updated = false;
+
+  // First pass: Validate existing IDs
+  for (let record of records) {
+    if (record.id !== undefined && record.id !== null && record.id.toString().trim() !== '') {
+      const currentId = parseInt(record.id.toString().trim(), 10);
+      
+      if (isNaN(currentId)) {
+        console.error(`❌ Build Error: Non-numeric ID found -> "${record.id}" for album "${record.album}"`);
+        process.exit(1);
+      }
+      
+      if (seenIds.has(currentId)) {
+        console.error(`❌ Build Error: Duplicate ID found -> ${currentId}`);
+        process.exit(1);
+      }
+      
+      seenIds.add(currentId);
+      maxId = Math.max(maxId, currentId);
     }
+  }
+
+  // Second pass: Assign IDs only to rows where id is genuinely missing/blank
+  for (let record of records) {
+    const hasId = record.id !== undefined && record.id !== null && record.id.toString().trim() !== '';
     
-    seenIds.add(currentId);
-    maxId = Math.max(maxId, currentId);
+    if (!hasId) {
+      maxId++;
+      record.id = maxId.toString();
+      updated = true;
+      console.log(`✨ Assigned new sequential ID ${maxId} to "${record.album}" by ${record.artist}`);
+    }
   }
-}
 
-// Second pass: Assign IDs only to rows where id is genuinely missing/blank
-for (let record of records) {
-  const hasId = record.id !== undefined && record.id !== null && record.id.toString().trim() !== '';
-  
-  if (!hasId) {
-    maxId++;
-    record.id = maxId.toString();
-    updated = true;
-    console.log(`✨ Assigned new sequential ID ${maxId} to "${record.album}" by ${record.artist}`);
+  // Third pass: Automatically fetch and populate missing cover art
+  for (let record of records) {
+    const hasCover = record.cover !== undefined && record.cover !== null && record.cover.toString().trim() !== '';
+    
+    if (!hasCover && record.artist && record.album) {
+      console.log(`🔍 Searching for album art: "${record.album}" by ${record.artist}...`);
+      const artworkUrl = await fetchCoverArt(record.artist, record.album);
+      
+      if (artworkUrl) {
+        record.cover = artworkUrl;
+        updated = true;
+        console.log(`🖼️ Found and populated cover art for "${record.album}"`);
+      }
+    }
   }
+
+  // Rewrite CSV if IDs were assigned or covers were populated
+  if (updated) {
+    const output = stringify(records, { header: true });
+    fs.writeFileSync(csvPath, output);
+    console.log("✅ CSV updated with fresh IDs and album art URLs.");
+  } else {
+    console.log("ℹ️ Collection is fully up to date.");
+  }
+
+  // Ensure public/api directory exists and write the JSON payload
+  if (!fs.existsSync(jsonOutputDir)) {
+    fs.mkdirSync(jsonOutputDir, { recursive: true });
+  }
+
+  fs.writeFileSync(jsonOutputPath, JSON.stringify(records, null, 2));
+  console.log("✅ Successfully generated public/api/collection.json.");
 }
 
-// Rewrite CSV if new IDs were added
-if (updated) {
-  const output = stringify(records, { header: true });
-  fs.writeFileSync(csvPath, output);
-  console.log("✅ CSV updated with clean lowercase 'id' header.");
-} else {
-  console.log('ℹ️ All records already had valid, unique IDs.');
-}
-
-// Ensure public/api directory exists and write the clean JSON payload
-if (!fs.existsSync(jsonOutputDir)) {
-  fs.mkdirSync(jsonOutputDir, { recursive: true });
-}
-
-fs.writeFileSync(jsonOutputPath, JSON.stringify(records, null, 2));
-console.log('✅ Successfully generated public/api/collection.json with a single, clean ID field.');
+run();
