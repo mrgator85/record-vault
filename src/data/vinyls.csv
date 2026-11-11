@@ -2,10 +2,10 @@ id,artist,album,genre,barcode,year,notes,cover
 1,A Perfect Circle,Thirteenth Step,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/36/46/fb/3646fbc9-ab6c-db5d-e18e-941ea3eb1e1f/APC_13th_TC_1600x1600_1.png/600x600bb.jpg
 2,AFI,All Hallows EP,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/10/e1/e2/10e1e2c2-c32f-6577-6d6b-d6d7166af0ee/00888072354166.rgb.jpg/600x600bb.jpg
 3,AFI,Black Sails In the Sunset,,,,25th anniversary edition - neon orange,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a7/fc/1e/a7fc1eff-6a9e-0ffe-cf08-26c27ad62d18/00888072354159.rgb.jpg/600x600bb.jpg
-4,AFI,Sing the Sorrow,,,,45 rpm,
-5,AFI,Silver Bleeds the Black Sun,,,,,
+4,AFI,Sing the Sorrow,,,,45 rpm,albumart/singthesorrow.png
+5,AFI,Silver Bleeds the Black Sun,,,,,albumart/silverbleedstheblacksun.png
 6,AFI,DecemberUnderground,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ba/3c/e1/ba3ce1d8-c63a-8d42-e3cc-85532f4a7785/06UMGIM22260.rgb.jpg/600x600bb.jpg
-7,AFI,Burials,,,,,
+7,AFI,Burials,,,,,albumart/burials.png
 8,Against Me,Reinventing Axl Rose,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b5/c0/ae/b5c0ae29-5b43-057b-5131-9c347f71ed4c/Reinventing_RGB_3000.jpg/600x600bb.jpg
 9,Alice in Chains,Jar of Flies,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/bd/d6/37/bdd6373e-dc26-e86e-1d31-9bb1f7656968/5099747485527.jpg/600x600bb.jpg
 10,Alkaline Trio,Damnesia,,,,,
@@ -13,7 +13,7 @@ id,artist,album,genre,barcode,year,notes,cover
 12,Arctic Monkeys,AM,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/69/9c/b5/699cb5d6-115c-ff73-9d26-e57ea4350d72/887828031795.png/600x600bb.jpg
 13,Bad Religion,The Dissent of Man,,,2010,Special Edition Orange,
 14,Band of Horses,Cease To Begin,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/cb/3f/9e/cb3f9e63-248d-eaaf-5806-e951f692b0fa/098787074567.png/600x600bb.jpg
-15,Band of Horses,Everything All the Time,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f8/e0/db/f8e0db52-f6e5-5d85-6e0a-ae73e5caab11/mzi.qohxegpg.jpg/600x600bb.jpg
+15,Band of Horses,Everything All the Time,,,,,albumart/everythingallthetime.png
 16,Blink-182,California,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/85/29/01/852901eb-132d-a8f8-9f91-1d842bb253d0/4050538215700.jpg/600x600bb.jpg
 17,Blink-182,Blink-182,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/e3/9d/c5/e39dc58d-faa8-e707-8f94-42840aaa7a0c/16UMGIM35665.rgb.jpg/600x600bb.jpg
 18,Blink-182,California,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/85/29/01/852901eb-132d-a8f8-9f91-1d842bb253d0/4050538215700.jpg/600x600bb.jpg
@@ -61,7 +61,7 @@ id,artist,album,genre,barcode,year,notes,cover
 60,Pearl Jam,Backspacer,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8e/e3/6f/8ee36fd7-f9a9-7ede-e173-b1e001e5e5aa/00602527189802.rgb.jpg/600x600bb.jpg
 61,Pearl Jam,Dark Matter,,,,10C special edition,https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/49/d9/79/49d97919-6d10-e43e-8344-2b7c800e9918/24UMGIM11953.rgb.jpg/600x600bb.jpg
 62,Pearl Jam,Gigaton,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/5b/5d/c9/5b5dc90a-c847-8126-4060-6d2626d4fdae/20UMGIM03561.rgb.jpg/600x600bb.jpg
-63,Pearl Jam,Ten Remastered,,,,,
+63,Pearl Jam,Ten Remastered,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c2/79/c4/c279c48b-2de1-0b5c-fc81-8fb3b5468ece/886448758860.jpg/600x600bb.jpg
 64,Pearl Jam,Yield,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8e/e3/6f/8ee36fd7-f9a9-7ede-e173-b1e001e5e5aa/00602527189802.rgb.jpg/600x600bb.jpg
 65,Pearl Jam,Binaural,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d6/9a/98/d69a983f-e276-40c4-4ac3-ce8983cc19ce/884977849899.jpg/600x600bb.jpg
 66,Pearl Jam,Lightning Bolt,,,,,
@@ -79,7 +79,7 @@ id,artist,album,genre,barcode,year,notes,cover
 78,Radiohead,In Rainbows,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/dd/50/c7/dd50c790-99ac-d3d0-5ab8-e3891fb8fd52/634904032463.png/600x600bb.jpg
 79,Red Hot Chili Peppers,By the Way,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ba/92/30/ba923057-ebc4-711e-33c9-5e3826907573/196292682946.jpg/600x600bb.jpg
 80,Red Hot Chili Peppers,Californication,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/94/d4/24/94d42473-eb0e-229b-dd84-900a1874a91d/093624931980.jpg/600x600bb.jpg
-81,Spanish Love Songs,Brave Faces Etc,,,,,
+81,Spanish Love Songs,Brave Faces Etc,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/e1/fb/07/e1fb0789-cd55-ecc7-8dfa-21f2bf03bb83/22CRGIM33021.rgb.jpg/600x600bb.jpg
 82,Stone Temple Pilots,Purple,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/9c/c1/4d/9cc14ddd-fc63-58eb-d911-98de74825324/603497869275.jpg/600x600bb.jpg
 83,Streetlight Manifesto,Everything goes Numb,,,,,https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b7/56/ab/b756aba4-c655-c72c-89cd-e64de1801a7d/859720904453_cover.jpg/600x600bb.jpg
 84,Sum 41,All the Good Shit,,,,,
